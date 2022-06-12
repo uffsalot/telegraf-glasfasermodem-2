@@ -6,6 +6,7 @@ Maybe also works with Huawei HG8010, as it seems that the "Glasfasermodem 2" is 
 If you already setup the management network, just add the `telegraf/ftth.conf` to your `telegraf.d` directory and restart telegraf.
 Otherwise you need to add the IP address `192.168.100.2/24` to the interface (without VLAN) on which the device is connected, for example the WAN interface on your OPNSense router. This has no effect on the PPPoE connection, as this is transferred via VLAN 7.
 
+A Grafana dashboard is provided under `grafana/`. Or download it directly from (grafana.com)[https://grafana.com/grafana/dashboards/16433]
 
 # Background
 The modem provides a json endpoint on `http://192.168.100.1/ONT/client/data/Status.json`. The hacky processors workaround is unfortunaly need, as the modem outputs ``--`` when no fiber cable is connected or the (unknown) threshold is reached.
