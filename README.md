@@ -1,5 +1,5 @@
 # telegraf-glasfasermodem-2
-![](img/dashboard.png)
+![](img/grafana-dashboard.png)
 Telegraf config to poll various stats from a Telekom Glasfasermodem (GPON ONT)
 Maybe also works with Huawei HG8010, as it seems that the "Glasfasermodem 2" is just a branded variant of it.
 
