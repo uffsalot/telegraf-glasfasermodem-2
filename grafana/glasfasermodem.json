@@ -109,14 +109,15 @@
           "calcs": [
             "first"
           ],
-          "fields": "/^glasfasermodem\\.alias \\{serialnumber: 53434F4DA032FBA1\\}$/",
+          "fields": "/^serialnumber$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "serialnumber",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -141,12 +142,6 @@
                   "devicename"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [
-                  "alias"
-                ],
-                "type": "alias"
               }
             ]
           ],
@@ -205,14 +200,15 @@
           "calcs": [
             "first"
           ],
-          "fields": "/^glasfasermodem\\.alias \\{serialnumber: 53434F4DA032FBA1\\}$/",
+          "fields": "/^hw\\-revision$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "hw-revision",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -237,12 +233,6 @@
                   "hardware_revision"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [
-                  "alias"
-                ],
-                "type": "alias"
               }
             ]
           ],
@@ -324,14 +314,15 @@
           "calcs": [
             "first"
           ],
-          "fields": "/^glasfasermodem\\.alias \\{serialnumber: 53434F4DA032FBA1\\}$/",
+          "fields": "/^hw\\-state$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "hw-state",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -356,12 +347,6 @@
                   "hardware_state"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [
-                  "alias"
-                ],
-                "type": "alias"
               }
             ]
           ],
@@ -443,14 +428,15 @@
           "calcs": [
             "lastNotNull"
           ],
-          "fields": "/^glasfasermodem\\.last$/",
+          "fields": "/^rebooting$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "rebooting",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -537,14 +523,15 @@
           "calcs": [
             "first"
           ],
-          "fields": "/^glasfasermodem\\.alias \\{serialnumber: 53434F4DA032FBA1\\}$/",
+          "fields": "/^fw\\-version$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "fw-version",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -569,12 +556,6 @@
                   "firmware_version"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [
-                  "alias"
-                ],
-                "type": "alias"
               }
             ]
           ],
@@ -633,14 +614,15 @@
           "calcs": [
             "first"
           ],
-          "fields": "/^glasfasermodem\\.alias \\{serialnumber: 53434F4DA032FBA1\\}$/",
+          "fields": "/^fw\\-standby\\-version$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "fw-standby-version",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -665,12 +647,6 @@
                   "firmware_version_standby"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [
-                  "alias"
-                ],
-                "type": "alias"
               }
             ]
           ],
@@ -731,7 +707,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
           "datasource": {
@@ -774,8 +750,8 @@
           "tags": [
             {
               "key": "serialnumber",
-              "operator": "=",
-              "value": "53434F4DA032FBA1"
+              "operator": "=~",
+              "value": "/^$Serialnumber$/"
             }
           ]
         }
@@ -841,14 +817,15 @@
           "calcs": [
             "lastNotNull"
           ],
-          "fields": "/^glasfasermodem\\.alias \\{serialnumber: 53434F4DA032FBA1\\}$/",
+          "fields": "/^link\\-status$/",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.5",
+      "pluginVersion": "9.0.6",
       "targets": [
         {
+          "alias": "link-status",
           "datasource": {
             "type": "influxdb",
             "uid": "${DS_TELEGRAF_BRAND}"
@@ -1095,8 +1072,8 @@
           "tags": [
             {
               "key": "serialnumber",
-              "operator": "=",
-              "value": "53434F4DA032FBA1"
+              "operator": "=~",
+              "value": "/^$Serialnumber$/"
             }
           ]
         }
@@ -1278,8 +1255,8 @@
           "tags": [
             {
               "key": "serialnumber",
-              "operator": "=",
-              "value": "53434F4DA032FBA1"
+              "operator": "=~",
+              "value": "/^$Serialnumber$/"
             }
           ]
         }
@@ -1469,8 +1446,8 @@
           "tags": [
             {
               "key": "serialnumber",
-              "operator": "=",
-              "value": "53434F4DA032FBA1"
+              "operator": "=~",
+              "value": "/^$Serialnumber$/"
             }
           ]
         },
@@ -1523,8 +1500,8 @@
           "tags": [
             {
               "key": "serialnumber",
-              "operator": "=",
-              "value": "53434F4DA032FBA1"
+              "operator": "=~",
+              "value": "/^$Serialnumber$/"
             }
           ]
         }
